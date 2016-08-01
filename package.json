@@ -1,6 +1,6 @@
 {
   "name": "gulp-export-comments",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Exports all jsdocs-style comments from either .js or .ts files",
   "main": "index.js",
   "scripts": {
