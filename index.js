@@ -1,33 +1,21 @@
-// var through = require("through2");
-// var gutil = require('gulp-util');
-// var PluginError = gutil.PluginError;
-// var ext = gutil.replaceExtension;
+var gutil = require('gulp-util');
+var ext = gutil.replaceExtension;
 
-// function gulpBuilder(options) {
-//     return through.obj(function (file, enc, cb) {
-//         if (file.isNull()) {
-//             cb(null, file);
-//         }
-
-//         file.path = ext(file.path, '.js');
-//         if(file.isStream()){
-//             return cb(new PluginError('jibo-comments', 'Streaming not supported'));
-//         }
-
-//         if (file.isBuffer()) {
-//             var contents = file.contents.toString();
-
-
-//             file.contents = new Buffer(contents);
-//         }
-
-//         cb(null, file);
-
-//     });
-// }
-
-
-// module.exports = gulpBuilder;
-
-var Foo = require('lib/jibo-comments').default;
-var f = new Foo();
+var through = require('through2');
+module.exports = function() {
+    return through.obj(function(file, encoding, callback) {
+        if (file.isBuffer()) {
+            file.path = ext(file.path, '.js');
+            var contents = file.contents.toString();
+            var comments = contents.match(/(( )*\/\*([^*]|[\r\n]|(\*+([^*/]|[\r\n])))*\*+\/)/gm);
+            if(comments) {
+                contents = comments.join('\n\n');
+            }
+            else {
+                contents = '';
+            }
+            file.contents = new Buffer(contents);
+        }
+        callback(null, file);
+    });
+};

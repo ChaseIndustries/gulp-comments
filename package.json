@@ -1,5 +1,5 @@
 {
-  "name": "jibo-comments",
+  "name": "gulp-comments",
   "version": "0.1.0",
   "description": "Builds comments without source",
   "main": "index.js",
@@ -8,20 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.jibo.com:sdk/jibo-comments.git"
-  },
-  "publishConfig": {
-    "registry": "http://npm.jibo.com:8080"
+    "url": "git@github.com:jiborobot/gulp-comments.git"
   },
   "author": "Jonathan Ross",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "gulp-util": "^3.0.7",
-    "through2": "^2.0.1",
-    "typescript": "^1.8.10"
-  },
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "jibo-gulp": "^3.1.0"
+    "through2": "^2.0.1"
   }
 }
