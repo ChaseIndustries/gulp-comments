@@ -1,8 +1,10 @@
 # gulp-comments
 
-Removes all jsdocs style comments from either `.js` or `.ts` file. This is used as a workaround for when
-the TypeScript compiler strips jsdoc comments from its output. By extracting the comments first, you can
-run the output directly from `.ts` files into jsdocs.
+Removes all jsdocs style comments from either `.js` or `.ts` file. 
+
+[![Build Status](https://travis-ci.org/jiborobot/gulp-comments.svg?branch=master)](https://travis-ci.org/jiborobot/gulp-comments)
+
+This is used as a workaround for when the TypeScript compiler strips jsdoc comments from its output. By extracting the comments first, you can run the output directly from `.ts` files into jsdocs.
 
 ## Install
 
