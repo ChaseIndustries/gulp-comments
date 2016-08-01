@@ -1,6 +1,6 @@
 # gulp-export-comments
 
-Removes all jsdocs-style comments from either `.js` or `.ts` files. 
+Exports all jsdocs-style comments from either `.js` or `.ts` files. 
 
 [![Build Status](https://travis-ci.org/jiborobot/gulp-export-comments.svg?branch=master)](https://travis-ci.org/jiborobot/gulp-export-comments)
 
