@@ -4,16 +4,31 @@
   "description": "Builds comments without source",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jshint index.js"
   },
+  "keywords": [
+    "gulp-plugin",
+    "comments",
+    "jsdoc",
+    "documentation",
+    "docs",
+    "typescript"
+  ],
   "repository": {
     "type": "git",
     "url": "git@github.com:jiborobot/gulp-comments.git"
   },
+  "bugs": {
+    "url": "https://github.com/jiborobot/gulp-comments/issues"
+  },
+  "homepage": "https://github.com/jiborobot/gulp-comments",
   "author": "Jonathan Ross",
   "license": "MIT",
   "dependencies": {
     "gulp-util": "^3.0.7",
     "through2": "^2.0.1"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.2"
   }
 }

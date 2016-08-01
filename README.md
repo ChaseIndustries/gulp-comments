@@ -4,7 +4,6 @@ Removes all jsdocs style comments from either `.js` or `.ts` file. This is used 
 the TypeScript compiler strips jsdoc comments from its output. By extracting the comments first, you can
 run the output directly from `.ts` files into jsdocs.
 
-
 ## Install
 
 ```
@@ -18,7 +17,7 @@ for the benefit of jsdocs.)
 
 Write the comments directly to files:
 
-```
+```js
 var gulp = require('gulp');
 var comments = require('gulp-comments');
 
@@ -32,7 +31,7 @@ gulp.task('comments', function() {
 
 Stream comments directly into `gulp-jsdocs`:
 
-```
+```js
 var gulp = require('gulp');
 var comments = require('gulp-comments');
 var jsdoc = require('gulp-jsdoc');
@@ -42,5 +41,4 @@ gulp.task('docs', function(done) {
         .pipe(comments())
         .pipe(jsdoc('docs.json', done));
 });
-
 ```
