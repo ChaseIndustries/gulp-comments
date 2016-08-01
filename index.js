@@ -7,7 +7,7 @@ module.exports = function() {
         if (file.isBuffer()) {
             file.path = ext(file.path, '.js');
             var contents = file.contents.toString();
-            var comments = contents.match(/(( )*\/\*([^*]|[\r\n]|(\*+([^*/]|[\r\n])))*\*+\/)/gm);
+            var comments = contents.match(/((( )*|\t*)\/\*([^*]|[\r\n]|(\*+([^*/]|[\r\n])))*\*+\/)/gm);
             if(comments) {
                 contents = comments.join('\n\n');
             }
