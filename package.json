@@ -1,5 +1,5 @@
 {
-  "name": "gulp-comments",
+  "name": "gulp-export-comments",
   "version": "0.1.0",
   "description": "Builds comments without source",
   "main": "index.js",
@@ -16,12 +16,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:jiborobot/gulp-comments.git"
+    "url": "git@github.com:jiborobot/gulp-export-comments.git"
   },
   "bugs": {
-    "url": "https://github.com/jiborobot/gulp-comments/issues"
+    "url": "https://github.com/jiborobot/gulp-export-comments/issues"
   },
-  "homepage": "https://github.com/jiborobot/gulp-comments",
+  "homepage": "https://github.com/jiborobot/gulp-export-comments",
   "author": "Jonathan Ross",
   "license": "MIT",
   "dependencies": {
