@@ -4,7 +4,8 @@
   "description": "Exports all jsdocs-style comments from either .js or .ts files",
   "main": "index.js",
   "scripts": {
-    "test": "jshint index.js"
+    "test": "jshint index.js",
+    "postversion": "git push --tags && git push"
   },
   "keywords": [
     "gulp-plugin",
