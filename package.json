@@ -1,7 +1,7 @@
 {
   "name": "gulp-export-comments",
   "version": "1.0.0",
-  "description": "Builds comments without source",
+  "description": "Exports all jsdocs-style comments from either .js or .ts files",
   "main": "index.js",
   "scripts": {
     "test": "jshint index.js"
