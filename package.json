@@ -1,6 +1,6 @@
 {
   "name": "gulp-export-comments",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Builds comments without source",
   "main": "index.js",
   "scripts": {
