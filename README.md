@@ -1,15 +1,15 @@
-# gulp-export-comments
+# gulp-comments
 
 Exports all jsdocs-style comments from either `.js` or `.ts` files. 
 
-[![Build Status](https://travis-ci.org/jiborobot/gulp-export-comments.svg?branch=master)](https://travis-ci.org/jiborobot/gulp-export-comments)
+[![Build Status](https://travis-ci.org/jiborobot/gulp-comments.svg?branch=master)](https://travis-ci.org/jiborobot/gulp-comments)
 
 This is used as a workaround for when the TypeScript compiler strips jsdoc comments from its output. By extracting the comments first, you can run the output directly from `.ts` files into jsdocs.
 
 ## Install
 
 ```
-npm i gulp-export-comments --save-dev
+npm i gulp-comments --save-dev
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ Write the comments directly to files:
 
 ```js
 var gulp = require('gulp');
-var comments = require('gulp-export-comments');
+var comments = require('gulp-comments');
 
 gulp.task('comments', function() {
     return gulp.src('src/**/*.{ts,js}')
@@ -35,7 +35,7 @@ Stream comments directly into `gulp-jsdocs`:
 
 ```js
 var gulp = require('gulp');
-var comments = require('gulp-export-comments');
+var comments = require('gulp-comments');
 var jsdoc = require('gulp-jsdoc');
 
 gulp.task('docs', function(done) {

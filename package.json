@@ -1,6 +1,6 @@
 {
-  "name": "gulp-export-comments",
-  "version": "1.0.1",
+  "name": "gulp-comments",
+  "version": "1.0.3",
   "description": "Exports all jsdocs-style comments from either .js or .ts files",
   "main": "index.js",
   "scripts": {
@@ -17,12 +17,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:jiborobot/gulp-export-comments.git"
+    "url": "git@github.com:jiborobot/gulp-comments.git"
   },
   "bugs": {
-    "url": "https://github.com/jiborobot/gulp-export-comments/issues"
+    "url": "https://github.com/jiborobot/gulp-comments/issues"
   },
-  "homepage": "https://github.com/jiborobot/gulp-export-comments",
+  "homepage": "https://github.com/jiborobot/gulp-comments",
   "author": "Jonathan Ross",
   "license": "MIT",
   "dependencies": {
