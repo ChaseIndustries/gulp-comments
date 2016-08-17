@@ -28,7 +28,6 @@ gulp.task('comments', function() {
         .pipe(comments())
         .pipe(gulp.dest('lib/docs'));
 });
-
 ```
 
 Stream comments directly into `gulp-jsdocs`:
@@ -43,4 +42,13 @@ gulp.task('docs', function(done) {
         .pipe(comments())
         .pipe(jsdoc('docs.json', done));
 });
+```
+### Options
+
+An optional **filter** parameter can be added when calling `comments()`. Any jsdoc block containing this string will be _excluded_ from publishing. Can be useful for creating custom documentation builds.
+
+```js
+//...
+.pipe(comments('@internal'))
+// ...
 ```
