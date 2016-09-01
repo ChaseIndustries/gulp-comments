@@ -22,7 +22,17 @@ module.exports = function(filter) {
                 contents = '';
             }
             file.contents = new Buffer(contents);
+
+            // Only export non-empty files
+            if (contents.trim().length > 0) {
+                return callback(null, file);
+            }
+            else {
+                callback();
+            }
         }
-        callback(null, file);
+        else {
+            callback(null, file);
+        }
     });
 };
