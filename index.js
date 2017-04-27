@@ -15,7 +15,7 @@ module.exports = function(filter) {
                   }
                   var regexFilter = new RegExp('(' + filter.join('|') + ')');
                   for (var i = comments.length - 1; i >= 0; i--) {
-                    if (comments[i].test(filterRegExp) >= 0) {
+                    if (regexFilter.test(comments[i]) >= 0) {
                         comments.splice(i, 1);
                     }
                   }
