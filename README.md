@@ -57,6 +57,6 @@ Multiple Filters
 
 ```js
 //...
-.pipe(comments(['@internal', '@justforme']))
+.pipe(comments(['@internal,@justforme']))
 // ...
 ```

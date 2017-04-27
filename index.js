@@ -8,23 +8,16 @@ module.exports = function(filter) {
             file.path = ext(file.path, '.js');
             var contents = file.contents.toString();
             var comments = contents.match(/[^\S\r\n]*\/(?:\*{2})([\W\w]+?)\*\//gm);
-            var filterComments = function (filter, comments){ 
-              for (var i = comments.length - 1; i >= 0; i--) {
-                if (comments[i].indexOf(filter) >= 0) {
-                    comments.splice(i, 1);
-                }
-              }
-              return comments;
-            }
-
             if(comments) {
-                if(filter){ 
-                  if (typeof filter == "string") {
-                    comments = filterComments(filter, comments);
-                  } else if(typeof filter  == "array"){
-                    filter.forEach(function(f){
-                      comments = filterComments(f, comments);
-                    });
+                if(filter){
+                  if (typeof filter === "string") {
+                    filter = filter.split(',');
+                  }
+                  var regexFilter = new RegExp('(' + filter.join('|') + ')');
+                  for (var i = comments.length - 1; i >= 0; i--) {
+                    if (comments[i].test(filterRegExp) >= 0) {
+                        comments.splice(i, 1);
+                    }
                   }
                 }
                 contents = comments.join('\n\n');
