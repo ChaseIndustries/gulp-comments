@@ -52,3 +52,11 @@ An optional **filter** parameter can be added when calling `comments()`. Any jsd
 .pipe(comments('@internal'))
 // ...
 ```
+
+Multiple Filters
+
+```js
+//...
+.pipe(comments(['@internal', '@justforme']))
+// ...
+```
