@@ -10,15 +10,15 @@ module.exports = function(filter) {
             var comments = contents.match(/[^\S\r\n]*\/(?:\*{2})([\W\w]+?)\*\//gm);
             if(comments) {
                 if(filter){
-                  if (typeof filter === "string") {
-                    filter = filter.split(',');
-                  }
-                  var regexFilter = new RegExp('(' + filter.join('|') + ')');
-                  for (var i = comments.length - 1; i >= 0; i--) {
-                    if (regexFilter.test(comments[i])) {
-                        comments.splice(i, 1);
+                    if (typeof filter === "string") {
+                        filter = filter.split(',');
                     }
-                  }
+                    var regexFilter = new RegExp('(' + filter.join('|') + ')');
+                    for (var i = comments.length - 1; i >= 0; i--) {
+                        if (regexFilter.test(comments[i])) {
+                            comments.splice(i, 1);
+                        }
+                    }
                 }
                 contents = comments.join('\n\n');
             }
